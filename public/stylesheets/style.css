@@ -1,0 +1,47 @@
+.card-img-top{
+    border-radius: 20px;
+}
+.card{
+    border-radius: 20px;
+    background-color: rgba(132, 243, 166, 0.150);  
+}
+.card-title{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.card-text{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.btn{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand{
+    background-color: rgba(83, 83, 83, 0.267);
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cadastro{
+    font-size: 10px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-direito {
+    justify-content: flex-end;
+}
+
+.post-detail img{
+    width: 800px;
+    height: 80px;
+}
+
+.post-detail h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: blue;
+}
