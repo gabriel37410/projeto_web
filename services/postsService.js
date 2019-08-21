@@ -21,6 +21,13 @@ var getPosts = function() {
             description: 'Meu segundo post',
             body: 'Meu segundo post blabla blabla',
         },
+        {
+            id: 4,
+            title: 'Post 4',
+            image: 'post2.jpg',
+            description: 'Meu segundo post',
+            body: 'Meu segundo post blabla blabla',
+        },
     ];
 
     return posts;
