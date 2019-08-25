@@ -17,14 +17,14 @@ var getPosts = function() {
         {
             id: 3,
             title: 'Post 3',
-            image: 'post2.jpg',
+            image: 'post3.jpg',
             description: 'Meu terceiro post',
             body: 'Meu terceiro post blabla blabla',
         },
         {
             id: 4,
             title: 'Post 4',
-            image: 'post2.jpg',
+            image: 'post4.jpg',
             description: 'Meu quarto post',
             body: 'Meu quarto post blabla blabla',
         },

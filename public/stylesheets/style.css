@@ -35,13 +35,22 @@
 }
 
 .post-detail img{
-    width: 800px;
-    height: 80px;
+    width: 600px;
+    height: 300px;
 }
 
 .post-detail h1{
     margin-top: 20px;
     margin-bottom: 20px;
     color: blue;
+}
+
+.links{
+    color: black;
+}
+
+.card-img-top{
+    width: 300px;
+    height: 200px;
 }
 
