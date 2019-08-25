@@ -1,9 +1,8 @@
 .card-img-top{
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .card{
-    border-radius: 20px;
-    background-color: rgba(132, 243, 166, 0.150);  
+    border-radius: 5px;
 }
 .card-title{
     font-size: 30px;
@@ -45,3 +44,4 @@
     margin-bottom: 20px;
     color: blue;
 }
+
