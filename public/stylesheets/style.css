@@ -54,3 +54,11 @@
     height: 200px;
 }
 
+.testimonial-description {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.testimony {
+    margin-bottom: 40px;
+}

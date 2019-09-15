@@ -4,7 +4,6 @@ var postsService = require('../services/postsService');
 var projectsService = require('../services/projectsService')
 
 /* GET home page. */
-
 //Mostra posts pagina inicial
 router.get('/', function(req, res, next) {
   var xposts = postsService.getPosts().slice(0, 3);  //slice para limitar a exibir apenas 3 posts
@@ -21,7 +20,7 @@ router.get('/posts/:postId', function(req, res, next){
 
 //Mostra lista de posts no menu Post
 router.get('/posts', function(req, res, next) {
-  var lposts = postsService.getPosts()
+  var lposts = postsService.getPosts();
   res.render('posts', { title: 'Posts', lista_post: lposts }); 
 });
 
