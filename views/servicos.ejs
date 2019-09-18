@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <%- include('imports'); -%>
+    </head>
+  
+    <body>
+        <%- include('navbar'); -%>
+
+        <% servicos.forEach((servicos) => { %> 
+        <div class="card mb-3" style="max-width: 700px;">
+        <a href="/servicos/<%= servicos.id %>" class="links">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="<%= `/images/${servicos.imagem}` %>" class="card-img ">
+                </div>
+            
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="servicosnome" class="card-title" >
+                        <%= servicos.nome %>
+                    </h5>
+        
+                    <p class="servicosdescricao" class="card-text">
+                        <%= servicos.breveDescricao %>
+                    </p>
+                    </div>
+                </div>
+            </div> 
+        </a> 
+        </div>
+      <% }); %>
+    </body>
+</html>

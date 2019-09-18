@@ -42,7 +42,6 @@
 .post-detail h1{
     margin-top: 20px;
     margin-bottom: 20px;
-    color: blue;
 }
 
 .links{
@@ -61,4 +60,20 @@
 
 .testimony {
     margin-bottom: 40px;
+}
+
+.servicosnome{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: black;
+}
+
+.servicosdescricao{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.mb-3 a{
+    text-decoration: none;
 }

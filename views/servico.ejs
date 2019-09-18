@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+    <%- include('navbar'); -%>
+
+      <div class="container">
+        <div class="row">
+        
+            <div class="post-detail">
+                <img src="/images/<%= servico.imagem %>" />
+                <h1 class="servicosnome" ><%= servico.nome %></h1>
+                <p class="servicosdescricao" ><%= servico.detalhadaDescricao %></p>
+            </div>
+
+        </div>
+      </div>
+
+  </body>
+</html>
