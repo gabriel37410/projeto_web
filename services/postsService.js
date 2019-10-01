@@ -1,38 +1,32 @@
-var getPosts = function() {
-    var posts = [
-        {
-            id: 1,
-            title: 'Post 1',
-            image: 'post1.jpg',
-            description: 'Meu primeiro post',
-            body: 'Meu primeiro post blabla',
-        },
-        {
-            id: 2,
-            title: 'Post 2',
-            image: 'post2.jpg',
-            description: 'Meu segundo post',
-            body: 'Meu segundo post blabla blabla',
-        },
-        {
-            id: 3,
-            title: 'Post 3',
-            image: 'post3.jpg',
-            description: 'Meu terceiro post',
-            body: 'Meu terceiro post blabla blabla',
-        },
-        {
-            id: 4,
-            title: 'Post 4',
-            image: 'post4.jpg',
-            description: 'Meu quarto post',
-            body: 'Meu quarto post blabla blabla',
-        },
-    ];
+var fs = require('fs');
 
+var postsFilePath = 'db/posts.json';
+
+var loadFilePosts = function() {
+    var fileData = fs.readFileSync(postsFilePath, 'utf8');
+    var posts = JSON.parse(fileData);
     return posts;
 }
 
+var saveFilePosts = function(posts) {
+    var data = JSON.stringify(posts);
+    fs.writeFileSync(postsFilePath, data, 'utf8');
+}
+
+var getPosts = function() {
+    var posts = loadFilePosts();
+    return posts;
+}
+
+var savePost = function(newPost) {
+    var posts = loadFilePosts();
+    posts.push(newPost);
+    saveFilePosts(posts);
+}
+
+
+
 module.exports = {
-    getPosts: getPosts
+    getPosts: getPosts,
+    savePost: savePost
 }

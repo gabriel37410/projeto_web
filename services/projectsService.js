@@ -1,32 +1,31 @@
-var getProjects = function() {
-    var projects = [
-        {
-            id: 1,
-            name: 'Projeto 1',
-            image: 'projeto1.jpg',
-            subject: 'Redes',
-            description: 'Breve descrição do projeto 1',
-        },
-        {
-            id: 2,
-            name: 'Projeto 2',
-            image: 'projeto2.jpg',
-            subject: 'Teste de software',
-            description: 'Breve descrição do projeto 2',
-        },
-        {
-            id: 3,
-            name: 'Projeto 3',
-            image: 'projeto3.jpg',
-            subject: 'Server Side',
-            description: 'Breve descrição do projeto 3',
-        },
+var fs = require('fs');
 
-    ];
+var projectsFilePatch = 'db/projects.json';
 
+var loadFileProjects = function() {
+    var fileData = fs.readFileSync(projectsFilePatch, 'utf8');
+    var projects = JSON.parse(fileData);
     return projects;
 }
 
+var saveFileProjects = function(projects) {
+    var data = JSON.stringify(projects);
+    fs.writeFileSync(projectsFilePatch, data, 'utf8');
+}
+
+var getProjects = function() {
+    var projects = loadFileProjects();
+    return projects;
+}
+
+var saveProject = function(newProject) {
+    var projects = loadFileProjects();
+    projects.push(newProject);
+    saveFileProjects(projects);
+}
+
+
 module.exports = {
-    getProjects: getProjects
+    getProjects: getProjects,
+    saveProject: saveProject
 }

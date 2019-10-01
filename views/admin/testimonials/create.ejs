@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Depoimentos</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+  
+  <div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Novo Depoimento</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+          <form action="create" method="POST">
+
+            <div class="form-group">
+                <label for="testimonialName">Nome</label>
+                <input name="name" type="text" class="form-control" id="testimonialName" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="testimonialCompany">Companhia</label>
+                <input name="company" type="text" class="form-control" id="testimonialCompany" placeholder="Companhia">
+            </div>
+            <div class="form-group">
+                <label for="testimonialTitle">Título</label>
+                <input name="title" type="text" class="form-control" id="testimonialTitle" placeholder="Título">
+            </div>
+            <div class="form-group">
+                <label for="testimonialTestimony">Depoimento</label>
+                <textarea name="testimony" type="text" class="form-control" id="testimonialTestimony" placeholder=""></textarea>
+            </div> 
+
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+
+          </form>
+        </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Depoimentos</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+  
+  <div class="container">
+    <div class="row">
+        <h1>Administração de Depoimentos</h1>
+    </div>
+
+    <div class="row mb-2">
+        <a href="/admin/testimonials/create" class="btn btn-success">Novo Depoimento</a>
+    </div>
+    
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% testimonials.forEach ((testimonial) => { %>
+                <tr>
+                  <td><%= testimonial.id %></td>
+                  <td><%= testimonial.name %></td>
+                </tr>
+              <% }); %>       
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+</body>
+</html>
