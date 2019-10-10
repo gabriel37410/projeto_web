@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var projectsService = require('../../services/projectsService');
+var upload = require('../../middlewares/uploaderMiddleware');
 
 router.get('/', function(req, res, next){
     var projects = projectsService.getProjects();
@@ -18,8 +19,8 @@ router.get('/create', function(req, res, next) {
     res.render('admin/projects/create');
 });
 
-////////////////////////////
-router.post('/create', function(req, res, next){
+
+router.post('/create', upload.single('image'), function(req, res, next){
     var projects = projectsService.getProjects();
 
     var newId = projects.length + 1;
@@ -27,7 +28,7 @@ router.post('/create', function(req, res, next){
     var newProject = {};
     newProject.id = newId;
     newProject.name = req.body.name;
-    newProject.image = req.body.image;
+    newProject.image = req.file.filename;
     newProject.subject = req.body.subject
     newProject.description = req.body.description;
     
@@ -36,7 +37,6 @@ router.post('/create', function(req, res, next){
 
     res.redirect('/admin/projects');
 
-});//////////////////
-
+});
 
 module.exports = router;

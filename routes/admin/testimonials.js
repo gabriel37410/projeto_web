@@ -18,11 +18,6 @@ router.get('/create', function(req, res, next) {
     res.render('admin/testimonials/create');
 });
 
-
-
-
-
-////////////////////////////
 router.post('/create', function(req, res, next){
     var testimonials = testimonialsService.getTestimonials();
 
@@ -40,6 +35,6 @@ router.post('/create', function(req, res, next){
 
     res.redirect('/admin/testimonials');
 
-});//////////////////
+});
 
 module.exports = router;
