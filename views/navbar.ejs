@@ -17,25 +17,32 @@
             <li class="navbar-brand">
               <a class="nav-link" href="/servicos">Serviços</a>
             </li>
-            <li class="navbar-brand">
-              <a class="nav-link" href="/admin/posts">Lista Posts</a>
-            </li>
-            <li class="navbar-brand">
-              <a class="nav-link" href="/admin/projects">Lista Projects</a>
-            </li>
-            <li class="navbar-brand">
-              <a class="nav-link" href="/admin/testimonials">Lista Depoimentos</a>
-            </li>
-          </ul>
         </div>
-        
-        <div class="navbar-direito">
-          <ul class="navbar-nas">
-            <li class="cadastro">
-              <a class="nav-link" href="#">Login</a>
-              <a class="nav-link" href="#">Cadastrar</a>
+
+
+        <li class="nav-item dropdown navbar-brand">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Administração
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/admin/posts">Posts</a>
+              <a class="dropdown-item" href="/admin/projects">Projects</a>
+              <a class="dropdown-item" href="/admin/testimonials">Depoimentos</a>
+            </div>
+        </li>
+
+
+        <% if (locals.loggedUser) { %>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= locals.loggedUser.email %>
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/auth/logout">Sair</a>
+            </div>
             </li>
           </ul>
-        <div>
+        <% } %> 
 
       </nav>

@@ -77,3 +77,7 @@
 .mb-3 a{
     text-decoration: none;
 }
+
+.nav-link{
+    color: black;
+}
