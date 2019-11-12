@@ -2,11 +2,11 @@
     {
         "id": 1,
         "nome": "Luz Sala",
-        "status": "Desligada"
+        "status": "0"
     },
     {
         "id": 2,
         "nome": "Luz Garagem",
-        "status": "Desligada"
+        "status": "0"
     }
 ]

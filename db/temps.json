@@ -2,21 +2,15 @@
     {
         "id": 1,
         "nome": "Sensor Sala",
-        "data1": "10/10/2019",
-        "valor1": 25,
-        "tipo1": "Temperatura",
-        "data2": "20/10/2019",
-        "valor2": 60,
-        "tipo2": "Umidade"
+        "data": "10/10/2019",
+        "temperatura": "25",
+        "umidade": "60"
     },
     {
         "id": 2,
         "nome": "Sensor da Churrasqueira",
-        "data1": "12/11/2019",
-        "valor1": "35",
-        "tipo1": "Temperatura",
-        "data2": "12/11/2019",
-        "valor2": "80",
-        "tipo2": "Umidade"
+        "data": "12/11/2019",
+        "temperatura": "35",
+        "umidade": "80"
     }
 ]
