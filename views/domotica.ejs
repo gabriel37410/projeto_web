@@ -17,20 +17,16 @@
                     <h3 class="margemdom"><button type="button" class="btn btn-secondary">Ligar</button></h3>
                 </div>
             <% }); %>
-        </div>
-    </div>
 
-<br>
-
-    <div class="container"> 
-        <div class="row">
             <% temps.forEach((item) => { %>
                 <div class="borda tam">
                     <h1 class="margemdom"><%= item.nome %></h1> 
                     <br>
-                    <h3 class="margemdom"><%= item.tipo %>: <%= item.valor %> graus</h3>
+                    <h3 class="margemdom"><%= item.tipo1 %>: <%= item.valor1 %> graus</h3>
+                    <h3 class="margemdom"><%= item.tipo2 %>: <%= item.valor2 %>%</h3>
                 </div>
             <% }); %>
+
         </div>
     </div>
 

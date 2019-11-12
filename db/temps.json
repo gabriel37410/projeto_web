@@ -1,16 +1,22 @@
 [
     {
         "id": 1,
-        "nome": "Temperatura Sala",
-        "data": "10/10/2019",
-        "valor": 25,
-        "tipo": "temperatura"
+        "nome": "Sensor Sala",
+        "data1": "10/10/2019",
+        "valor1": 25,
+        "tipo1": "Temperatura",
+        "data2": "20/10/2019",
+        "valor2": 60,
+        "tipo2": "Umidade"
     },
     {
         "id": 2,
-        "nome": "Temperatura Quarto 1",
-        "data": "10/12/2018",
-        "valor": "33",
-        "tipo": "Temperatura"
+        "nome": "Sensor da Churrasqueira",
+        "data1": "12/11/2019",
+        "valor1": "35",
+        "tipo1": "Temperatura",
+        "data2": "12/11/2019",
+        "valor2": "80",
+        "tipo2": "Umidade"
     }
 ]

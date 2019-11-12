@@ -10,7 +10,7 @@
   
   <div class="container">
     <div class="row">
-        <h1>Administração de Sensores de temperatura</h1>
+        <h1>Administração de Sensores</h1>
     </div>
 
     <div class="row mb-2">
@@ -23,9 +23,8 @@
               <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Data</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Tipo</th>
+                <th scope="col">Temperatura</th>
+                <th scope="col">Umidade</th>
               </tr>
             </thead>
             <tbody>
@@ -33,9 +32,8 @@
                 <tr>
                   <td><%= temp.id %></td>
                   <td><%= temp.nome %></td>
-                  <td><%= temp.data %></td>
-                  <td><%= temp.valor %></td>
-                  <td><%= temp.tipo %></td>
+                  <td><%= temp.tipo1 %>: <%= temp.valor1 %> graus</td>
+                  <td><%= temp.tipo2 %>: <%= temp.valor2 %>%</td>
                 </tr>
               <% }); %>       
             </tbody>
