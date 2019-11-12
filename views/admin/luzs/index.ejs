@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luzes</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+  
+  <div class="container">
+    <div class="row">
+        <h1>Administração de Sensores de acionamento</h1>
+    </div>
+
+    <div class="row mb-2">
+        <a href="/admin/luzs/create" class="btn btn-success">Novo Dispositivo</a>
+    </div>
+    
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% luzs.forEach ((luz) => { %>
+                <tr>
+                  <td><%= luz.id %></td>
+                  <td><%= luz.nome %></td>
+                  <td><%= luz.status %></td>
+                </tr>
+              <% }); %>       
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+</body>
+</html>

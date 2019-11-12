@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var testimonialsService = require('../../services/testimonialsService');
+var upload = require('../../middlewares/uploaderMiddleware');
 
 router.get('/', function(req, res, next){
     var testimonials = testimonialsService.getTestimonials();
@@ -18,7 +19,7 @@ router.get('/create', function(req, res, next) {
     res.render('admin/testimonials/create');
 });
 
-router.post('/create', function(req, res, next){
+router.post('/create', upload.single('image'), function(req, res, next){
     var testimonials = testimonialsService.getTestimonials();
 
     var newId = testimonials.length + 1;

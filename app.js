@@ -14,6 +14,10 @@ var adminProjectsRouter = require('./routes/admin/projects');
 var adminTestimonialsRouter = require('./routes/admin/testimonials');
 var authRouter = require('./routes/auth');
 var verifyAuth = require('./middlewares/authMiddleware');
+var tempsRouter = require('./routes/temps');//
+var adminTempsRouter = require('./routes/admin/temps');//
+var luzsRouter = require('./routes/luzs');//
+var adminLuzsRouter = require('./routes/admin/luzs');//
 
 var app = express();
 
@@ -43,6 +47,10 @@ app.use('/servicos', servicosRouter);
 app.use('/admin/posts', [verifyAuth], adminPostsRouter);
 app.use('/admin/projects', [verifyAuth], adminProjectsRouter);
 app.use('/admin/testimonials', [verifyAuth], adminTestimonialsRouter);
+app.use('/temps', tempsRouter);//
+app.use('/admin/temps', [verifyAuth], adminTempsRouter);//
+app.use('/luzs', luzsRouter);//
+app.use('/admin/luzs', [verifyAuth], adminLuzsRouter);//
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

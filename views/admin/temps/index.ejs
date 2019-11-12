@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperaturas</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+  
+  <div class="container">
+    <div class="row">
+        <h1>Administração de Sensores de temperatura</h1>
+    </div>
+
+    <div class="row mb-2">
+        <a href="/admin/temps/create" class="btn btn-success">Novo Sensor</a>
+    </div>
+    
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% temps.forEach ((temp) => { %>
+                <tr>
+                  <td><%= temp.id %></td>
+                  <td><%= temp.nome %></td>
+                  <td><%= temp.data %></td>
+                  <td><%= temp.valor %></td>
+                  <td><%= temp.tipo %></td>
+                </tr>
+              <% }); %>       
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+</body>
+</html>

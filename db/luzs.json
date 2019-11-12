@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "nome": "Luz Sala",
+        "status": "desligada"
+    },
+    {
+        "id": 2,
+        "nome": "Luz Quarto 1",
+        "status": "Ligada"
+    }
+]

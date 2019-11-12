@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+    <%- include('navbar'); -%>
+
+      <div class="container">
+            <% temps.forEach((item) => { %>
+                <div class="testimony">
+                    <h2 class="testimonial-description">
+                        "<%= item.nome %>"
+                    </h2>
+                    <br>
+                    <p class="testimonial-info">
+                        <%= item.data %> (<%= item.valor %>) - <%= item.tipo %>
+                    </p>
+                </div>
+            <% }); %>
+      </div>
+
+  </body>
+</html>

@@ -31,6 +31,7 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects', lista_projects: lprojects});
 });
 
+
 //Mostrar cada project especifico
 router.get('/projects/:projectId', function(req, res, next){
   var projectId = req.params.projectId;

@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "nome": "Temperatura Sala",
+        "data": "10/10/2019",
+        "valor": 25,
+        "tipo": "temperatura"
+    },
+    {
+        "id": 2,
+        "nome": "Temperatura Quarto 1",
+        "data": "10/12/2018",
+        "valor": "33",
+        "tipo": "Temperatura"
+    }
+]
